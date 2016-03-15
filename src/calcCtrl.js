@@ -16,9 +16,9 @@
       if(operator === 'plus'){
         var result = firstArg + secondArg;
         vm.result = result;
-      //} else if (operator === 'minus'){
-      //  var result = firstArg - secondArg;
-      //  vm.result = result;
+      } else if (operator === 'minus'){
+        var result = firstArg - secondArg;
+        vm.result = result;
       } else if(operator === 'divide'){
         if (secondArg !== 0){
           var result = firstArg / secondArg;
@@ -26,8 +26,10 @@
         } else {
           vm.result = 'Cannot divide by zero'
         }
-      }
-      else {
+      } else if (operator === 'multiply'){
+        var result = firstArg * secondArg;
+        vm.result = result;
+      } else {
         vm.result = 'Operator not implemented';
       }
     }
